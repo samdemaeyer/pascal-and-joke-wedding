@@ -12,9 +12,10 @@
     "@types/react-animate-on-scroll": "^2.1.8",
     "@types/react-dom": "^18.2.23",
     "@types/react-router-dom": "^5.3.3",
-    "aws-sdk": "^2.1589.0",
     "animate.css": "^4.1.1",
+    "aws-sdk": "^2.1589.0",
     "bootstrap": "^5.3.3",
+    "gh-pages": "^6.1.1",
     "react": "^18.2.0",
     "react-animate-on-scroll": "^2.1.7",
     "react-countdown": "^2.3.5",
@@ -28,7 +29,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
