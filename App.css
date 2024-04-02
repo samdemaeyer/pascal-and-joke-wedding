@@ -219,7 +219,6 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -778,13 +777,11 @@ figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
 }
 .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
   color: #f14e95;
   padding-left: 10px;
   padding-right: 10px;
@@ -868,14 +865,14 @@ form label {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 40px;
+    font-size: 80px;
   }
 }
 @media screen and (max-width: 480px) {
   #fh5co-header .display-tc h1,
   #fh5co-counter .display-tc h1,
   .fh5co-cover .display-tc h1 {
-    font-size: 30px;
+    font-size: 60px;
   }
 }
 #fh5co-header .display-tc h2,
@@ -1006,6 +1003,22 @@ form label {
   text-transform: uppercase;
   font-size: 12px;
   /* words */
+}
+
+@media screen and (max-width: 768px) {
+  .simply-countdown > .simply-section {
+    width: 80px;
+    height: 80px;
+  }
+
+  .simply-countdown > .simply-section > div {
+    width: 80px;
+    height: 80px;
+  }
+
+  .simply-countdown > .simply-section .simply-amount {
+    font-size: 20px;
+  }
 }
 
 #fh5co-testimonial,
@@ -1248,7 +1261,6 @@ form label {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
   width: 100px;
   height: 100px;
 }
@@ -1452,7 +1464,7 @@ form label {
 #fh5co-offcanvas {
   position: absolute;
   z-index: 1901;
-  width: 270px;
+  width: 180px;
   background: black;
   top: 0;
   right: 0;
@@ -1579,6 +1591,8 @@ form label {
   height: 25px;
   cursor: pointer;
   text-decoration: none;
+  background: none;
+  border: none;
 }
 .fh5co-nav-toggle.active i::before,
 .fh5co-nav-toggle.active i::after {

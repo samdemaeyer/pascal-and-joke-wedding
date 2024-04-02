@@ -4,6 +4,7 @@ import '../App.css';
 import '../icomoon.css';
 import '../animate.min.css';
 import { LinksFunction, MetaFunction } from '@remix-run/node';
+import { useState } from 'react';
 
 export const links: LinksFunction = () => {
   return [
@@ -41,9 +42,39 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
+const NavLinks = () => (
+  <ul>
+    <li>
+      <NavLink to="/">Home</NavLink>
+    </li>
+    <li>
+      <NavLink to="/story">Story</NavLink>
+    </li>
+    <li>
+      <NavLink to="/gallery">Gallery</NavLink>
+    </li>
+    <li>
+      <NavLink to="/contact">Contact</NavLink>
+    </li>
+  </ul>
+);
+
 export default function App() {
+  const [offcanvasNavActive, setOffcanvasNavActive] = useState(false);
+
   return (
     <div className="App" id="page">
+      <button
+        className={`js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white ${offcanvasNavActive ? 'active' : ''}`}
+        onClick={() => setOffcanvasNavActive(!offcanvasNavActive)}
+      >
+        <i></i>
+      </button>
+      <div className={offcanvasNavActive ? 'offcanvas' : ''}>
+        <div id="fh5co-offcanvas">
+          <NavLinks />
+        </div>
+      </div>
       <nav className="fh5co-nav" role="navigation">
         <div className="container">
           <div className="row">
@@ -55,20 +86,7 @@ export default function App() {
               </div>
             </div>
             <div className="col-xs-10 text-right menu-1">
-              <ul>
-                <li>
-                  <NavLink to="/">Home</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/story">Story</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/gallery">Gallery</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/contact">Contact</NavLink>
-                </li>
-              </ul>
+              <NavLinks />
             </div>
           </div>
         </div>
