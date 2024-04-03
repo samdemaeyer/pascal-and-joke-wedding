@@ -1,48 +1,13 @@
 import './PhotoPreview.css';
 
-export const PhotoPreview = () => {
-  return (
-    <div className="carousel-container">
-      <div className="carousel-card">
-        <img className="carousel-img background" src="kira-hugo.jpeg" />
-        <div className="carousel-card-content">
-          {/* <svg> ... </svg> */}
-          <h3 className="title">GTA 6</h3>
+export const PhotoPreview = ({ data }: { data: string[][] }) =>
+  data?.map((imageURls, i) => (
+    <div key={i} className="carousel-container">
+      {imageURls?.map((url) => (
+        <div key={url} className="carousel-card">
+          <img className="carousel-img background" src={url} alt="Uploaded from the wedding" />
+          <div className="backdrop"></div>
         </div>
-        <div className="backdrop"></div>
-      </div>
-      <div className="carousel-card">
-        <img className="carousel-img background" src="kira-hugo.jpeg" />
-        <div className="carousel-card-content">
-          {/* <svg> ... </svg> */}
-          <h3 className="title">GTA 6</h3>
-        </div>
-        <div className="backdrop"></div>
-      </div>
-      <div className="carousel-card">
-        <img className="carousel-img background" src="kira-hugo.jpeg" />
-        <div className="carousel-card-content">
-          {/* <svg> ... </svg> */}
-          <h3 className="title">GTA 6</h3>
-        </div>
-        <div className="backdrop"></div>
-      </div>
-      <div className="carousel-card">
-        <img className="carousel-img background" src="kira-hugo.jpeg" />
-        <div className="carousel-card-content">
-          {/* <svg> ... </svg> */}
-          <h3 className="title">GTA 6</h3>
-        </div>
-        <div className="backdrop"></div>
-      </div>
-      <div className="carousel-card">
-        <img className="carousel-img background" src="kira-hugo.jpeg" />
-        <div className="carousel-card-content">
-          {/* <svg> ... </svg> */}
-          <h3 className="title">GTA 6</h3>
-        </div>
-        <div className="backdrop"></div>
-      </div>
+      ))}
     </div>
-  );
-};
+  ));

@@ -54,6 +54,9 @@ const NavLinks = () => (
       <NavLink to="/gallery">Gallery</NavLink>
     </li>
     <li>
+      <NavLink to="/upload">Upload</NavLink>
+    </li>
+    <li>
       <NavLink to="/contact">Contact</NavLink>
     </li>
   </ul>
