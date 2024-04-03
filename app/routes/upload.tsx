@@ -46,25 +46,24 @@ export default function Index() {
               <div className="display-tc animate-box" data-animate-effect="fadeIn">
                 <h1>Upload</h1>
                 <fetcher.Form method="post" encType="multipart/form-data" className="pt-2">
-                  {!imageIsSelected ? (
-                    <>
-                      <label htmlFor="img-field" className="btn">
-                        Select an image to upload
-                      </label>
-                      <input
-                        id="img-field"
-                        type="file"
-                        name="img"
-                        accept="image/*"
-                        style={{ display: 'none' }}
-                        onChange={() => setImageIsSelected(!imageIsSelected)}
-                      />
-                    </>
-                  ) : (
+                  <div style={{ display: imageIsSelected ? 'none' : 'block' }}>
+                    <label htmlFor="img-field" className="btn">
+                      Select an image to upload
+                    </label>
+                    <input
+                      id="img-field"
+                      type="file"
+                      name="img"
+                      accept="image/*"
+                      style={{ display: 'none' }}
+                      onChange={() => setImageIsSelected(!imageIsSelected)}
+                    />
+                  </div>
+                  <div style={{ display: imageIsSelected ? 'block' : 'none' }}>
                     <button type="submit" className="btn">
                       Upload to S3
                     </button>
-                  )}
+                  </div>
                 </fetcher.Form>
               </div>
             </div>
