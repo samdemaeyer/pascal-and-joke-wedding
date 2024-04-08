@@ -1,6 +1,6 @@
-import { PhotoPreview } from 'components/PhotoPreview';
+import { Photo, PhotoItem } from 'components/PhotoItem';
 
-export const Gallery = ({ data }: { data: string[][] }) => {
+export const Gallery = ({ data }: { data: Photo[] }) => {
   return (
     <>
       <header
@@ -23,8 +23,11 @@ export const Gallery = ({ data }: { data: string[][] }) => {
           </div>
         </div>
       </header>
-
-      {data && <PhotoPreview data={data} />}
+      <ul className="image-gallery">
+        {data.map((photo, i) => (
+          <PhotoItem photo={photo} key={i} />
+        ))}
+      </ul>
     </>
   );
 };
