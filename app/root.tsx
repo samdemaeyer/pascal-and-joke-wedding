@@ -4,7 +4,7 @@ import '../App.css';
 import '../icomoon.css';
 import '../animate.min.css';
 import { LinksFunction, MetaFunction } from '@remix-run/node';
-import { useState } from 'react';
+import { Dispatch, useState } from 'react';
 
 export const links: LinksFunction = () => {
   return [
@@ -42,22 +42,32 @@ export function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-const NavLinks = () => (
+const NavLinks = ({ setOffcanvasNavActive }: { setOffcanvasNavActive: Dispatch<React.SetStateAction<boolean>> }) => (
   <ul>
     <li>
-      <NavLink to="/">Home</NavLink>
+      <NavLink to="/" onClick={() => setOffcanvasNavActive(false)}>
+        Home
+      </NavLink>
     </li>
     <li>
-      <NavLink to="/story">Story</NavLink>
+      <NavLink to="/story" onClick={() => setOffcanvasNavActive(false)}>
+        Story
+      </NavLink>
     </li>
     <li>
-      <NavLink to="/gallery">Gallery</NavLink>
+      <NavLink to="/gallery" onClick={() => setOffcanvasNavActive(false)}>
+        Gallery
+      </NavLink>
     </li>
     <li>
-      <NavLink to="/upload">Upload</NavLink>
+      <NavLink to="/upload" onClick={() => setOffcanvasNavActive(false)}>
+        Upload
+      </NavLink>
     </li>
     <li>
-      <NavLink to="/contact">Contact</NavLink>
+      <NavLink to="/contact" onClick={() => setOffcanvasNavActive(false)}>
+        Contact
+      </NavLink>
     </li>
   </ul>
 );
@@ -75,7 +85,7 @@ export default function App() {
       </button>
       <div className={offcanvasNavActive ? 'offcanvas' : ''}>
         <div id="fh5co-offcanvas">
-          <NavLinks />
+          <NavLinks setOffcanvasNavActive={setOffcanvasNavActive} />
         </div>
       </div>
       <nav className="fh5co-nav" role="navigation">
@@ -83,13 +93,13 @@ export default function App() {
           <div className="row">
             <div className="col-xs-2">
               <div id="fh5co-logo">
-                <NavLink to="/">
+                <NavLink to="/" onClick={() => setOffcanvasNavActive(false)}>
                   Wedding<strong>.</strong>
                 </NavLink>
               </div>
             </div>
             <div className="col-xs-10 text-right menu-1">
-              <NavLinks />
+              <NavLinks setOffcanvasNavActive={setOffcanvasNavActive} />
             </div>
           </div>
         </div>

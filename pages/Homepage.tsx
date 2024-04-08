@@ -1,4 +1,4 @@
-import { Countdown } from 'components/Countdown';
+import { Countdown } from 'components/Countdown/Countdown';
 import { Couple } from '../components/sections/Couple';
 import { EventInfo } from '../components/sections/EventInfo';
 import { OurStory } from '../components/sections/OurStory';

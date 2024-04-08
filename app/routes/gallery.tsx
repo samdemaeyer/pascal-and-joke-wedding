@@ -2,7 +2,7 @@ import type { MetaFunction } from '@remix-run/node';
 import { Gallery } from '../../pages/Gallery';
 import { useLoaderData } from '@remix-run/react';
 import { listObjectsInBucket } from '~/utils/s3.server';
-import { Photo } from 'components/PhotoItem';
+import { Photo } from 'components/PhotoItem/PhotoItem';
 
 export const meta: MetaFunction = () => {
   return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];

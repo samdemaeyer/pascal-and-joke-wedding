@@ -25,8 +25,8 @@ body {
 #page {
   position: relative;
   overflow-x: hidden;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -1986,4 +1986,32 @@ form label {
   max-height: 80%;
   border: 5px solid white;
   border-radius: 4px;
+}
+
+.image-gallery .nav-btn {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  z-index: 501;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 3rem;
+  width: 50px;
+}
+
+.image-gallery .nav-btn:hover {
+  box-shadow: 4px 4px 10px #0000006b;
+}
+
+.image-gallery .nav-btn:disabled {
+  color: gray;
+}
+
+.image-gallery .nav-btn.prev {
+  left: 50px;
+}
+
+.image-gallery .nav-btn.next {
+  right: 50px;
 }
