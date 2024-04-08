@@ -1918,6 +1918,17 @@ form label {
   padding-top: 2rem;
 }
 
+/* Upload button */
+
+.uploading-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+/* Image Galary */
+
 .image-gallery {
   display: flex;
   flex-wrap: wrap;
@@ -1931,6 +1942,12 @@ form label {
   cursor: pointer;
   position: relative;
   list-style: none;
+}
+
+@media screen and (max-width: 500px) {
+  .image-gallery > li {
+    height: 120px;
+  }
 }
 
 .image-gallery::after {

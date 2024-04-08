@@ -7,6 +7,7 @@ import {
   unstable_parseMultipartFormData as parseMultipartFormData,
 } from '@remix-run/node';
 import { useFetcher } from '@remix-run/react';
+import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
 import { useState } from 'react';
 import { s3UploadHandler } from '~/utils/s3.server';
 
@@ -48,7 +49,7 @@ export default function Index() {
                 <fetcher.Form method="post" encType="multipart/form-data" className="pt-2">
                   <div style={{ display: imageIsSelected ? 'none' : 'block' }}>
                     <label htmlFor="img-field" className="btn">
-                      Select an image to upload
+                      Select images to upload
                     </label>
                     <input
                       id="img-field"
@@ -56,12 +57,21 @@ export default function Index() {
                       name="img"
                       accept="image/*"
                       style={{ display: 'none' }}
+                      multiple
                       onChange={() => setImageIsSelected(!imageIsSelected)}
                     />
                   </div>
                   <div style={{ display: imageIsSelected ? 'block' : 'none' }}>
                     <button type="submit" className="btn">
-                      Upload to S3
+                      {fetcher.state === 'submitting' ? (
+                        <div className="uploading-btn">
+                          <LoadingSpinner />
+                          Uploading
+                          <LoadingSpinner />
+                        </div>
+                      ) : (
+                        'Upload'
+                      )}
                     </button>
                   </div>
                 </fetcher.Form>
