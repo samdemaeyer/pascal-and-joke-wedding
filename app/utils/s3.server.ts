@@ -36,7 +36,7 @@ const uploadStream = ({ Key }: Pick<AWS.S3.Types.PutObjectRequest, 'Key'>) => {
 };
 
 async function uploadStreamToS3(data: AsyncIterable<Uint8Array>, filename: string) {
-  const stream = uploadStream({ Key: filename.replace(/[^\w.]|_/g, '_') });
+  const stream = uploadStream({ Key: `${Date.now()}-${filename.replace(/[^\w.]|_/g, '_')}` });
   await writeAsyncIterableToWritable(data, stream.writeStream);
   const file = await stream.promise;
   return file.Location;

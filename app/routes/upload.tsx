@@ -31,7 +31,8 @@ export const action = async ({ request }: ActionFunctionArgs) => {
 
 export default function Index() {
   const fetcher = useFetcher<ActionData>();
-  const [imageIsSelected, setImageIsSelected] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   return (
     <header
       id="fh5co-header"
@@ -47,7 +48,7 @@ export default function Index() {
               <div className="display-tc animate-box" data-animate-effect="fadeIn">
                 <h1>Upload</h1>
                 <fetcher.Form method="post" encType="multipart/form-data" className="pt-2">
-                  <div style={{ display: imageIsSelected ? 'none' : 'block' }}>
+                  <div style={{ display: isSubmitting ? 'none' : 'block' }}>
                     <label htmlFor="img-field" className="btn">
                       Select images to upload
                     </label>
@@ -58,22 +59,23 @@ export default function Index() {
                       accept="image/*"
                       style={{ display: 'none' }}
                       multiple
-                      onChange={() => setImageIsSelected(!imageIsSelected)}
+                      onChange={(event) => {
+                        setIsSubmitting(true);
+                        event.target.form?.submit();
+                      }}
                     />
                   </div>
-                  <div style={{ display: imageIsSelected ? 'block' : 'none' }}>
-                    <button type="submit" className="btn">
-                      {fetcher.state === 'submitting' ? (
+                  {isSubmitting && (
+                    <div>
+                      <button className="btn">
                         <div className="uploading-btn">
                           <LoadingSpinner />
                           Uploading
                           <LoadingSpinner />
                         </div>
-                      ) : (
-                        'Upload'
-                      )}
-                    </button>
-                  </div>
+                      </button>
+                    </div>
+                  )}
                 </fetcher.Form>
               </div>
             </div>
