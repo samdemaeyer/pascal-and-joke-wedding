@@ -16,10 +16,10 @@ export const Couple = () => (
         <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
           <div className="couple-half">
             <div className="groom">
-              <img src="images/groom.jpg" alt="groom" className="img-responsive" />
+              <img src="images/Joke.jpg" alt="bride" className="img-responsive" />
             </div>
             <div className="desc-groom">
-              <h3>Pascal Van Ootegem</h3>
+              <h3>Joke De Maeyer</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
                 blind texts. Separated they live in Bookmarksgrove
@@ -31,10 +31,10 @@ export const Couple = () => (
           </p>
           <div className="couple-half">
             <div className="bride">
-              <img src="images/bride.jpg" alt="groom" className="img-responsive" />
+              <img src="images/Pascal.jpg" alt="groom" className="img-responsive" />
             </div>
             <div className="desc-bride">
-              <h3>Joke De Maeyer</h3>
+              <h3>Pascal Van Ootegem</h3>
               <p>
                 Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
                 blind texts. Separated they live in Bookmarksgrove
