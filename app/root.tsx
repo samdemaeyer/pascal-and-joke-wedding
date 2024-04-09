@@ -58,6 +58,11 @@ const NavLinks = ({ setOffcanvasNavActive }: { setOffcanvasNavActive: Dispatch<R
       </NavLink>
     </li>
     <li>
+      <NavLink to="/slideshow" onClick={() => setOffcanvasNavActive(false)}>
+        Slideshow
+      </NavLink>
+    </li>
+    <li>
       <NavLink to="/upload" onClick={() => setOffcanvasNavActive(false)}>
         Upload
       </NavLink>
@@ -102,7 +107,7 @@ export default function App() {
           </div>
         </div>
       </nav>
-      <Outlet />;
+      <Outlet />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { useLoaderData } from '@remix-run/react';
 import { ListObjectsCommand, S3Client } from '@aws-sdk/client-s3';
 import { Photo } from 'components/PhotoItem/PhotoItem';
-import { Gallery } from 'pages/Gallery/Gallery';
+import { SlideShow } from 'pages/SlideShow/SlideShow';
 
 export const loader = async () => {
   const client = new S3Client({
@@ -19,5 +19,5 @@ export const loader = async () => {
 export default function Index() {
   const data = useLoaderData<Photo[]>();
 
-  return <Gallery data={data} />;
+  return <SlideShow data={data} />;
 }
