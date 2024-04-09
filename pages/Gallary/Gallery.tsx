@@ -1,4 +1,5 @@
 import { Photo, PhotoItem } from 'components/PhotoItem/PhotoItem';
+import './Gallary.css';
 
 export const Gallery = ({ data }: { data: Photo[] }) => (
   <>
