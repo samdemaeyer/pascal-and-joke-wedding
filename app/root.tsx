@@ -13,16 +13,14 @@ export const links: LinksFunction = () => {
   ];
 };
 
-export const meta: MetaFunction = () => {
-  return [
-    { title: 'Pascal & Joke Gaan Trouwen' },
-    {
-      name: 'description',
-      content:
-        'Pascal en Joke geven elkaar het jawoord op 18 mei om 13:00 uur in het gemeentehuis van Diepenbeek. Je bent welkom om hier een kijkje te komen nemen',
-    },
-  ];
-};
+export const meta: MetaFunction = () => [
+  { title: 'Pascal & Joke Gaan Trouwen' },
+  {
+    name: 'description',
+    content:
+      'Pascal en Joke geven elkaar het jawoord op 18 mei om 13:00 uur in het gemeentehuis van Diepenbeek. Je bent welkom om hier een kijkje te komen nemen',
+  },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (

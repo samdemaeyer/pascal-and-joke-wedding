@@ -1,12 +1,7 @@
-import type { MetaFunction } from '@remix-run/node';
 import { useLoaderData } from '@remix-run/react';
 import { ListObjectsCommand, S3Client } from '@aws-sdk/client-s3';
 import { Photo } from 'components/PhotoItem/PhotoItem';
 import { Gallery } from 'pages/Gallary/Gallery';
-
-export const meta: MetaFunction = () => {
-  return [{ title: 'New Remix App' }, { name: 'description', content: 'Welcome to Remix!' }];
-};
 
 export const loader = async () => {
   const client = new S3Client({
