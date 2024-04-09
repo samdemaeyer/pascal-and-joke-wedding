@@ -1,37 +1,31 @@
-import type { ActionFunctionArgs, UploadHandler } from '@remix-run/node';
-import {
-  redirect,
-  json,
-  unstable_composeUploadHandlers as composeUploadHandlers,
-  unstable_createMemoryUploadHandler as createMemoryUploadHandler,
-  unstable_parseMultipartFormData as parseMultipartFormData,
-} from '@remix-run/node';
-import { useFetcher } from '@remix-run/react';
 import { LoadingSpinner } from 'components/LoadingSpinner/LoadingSpinner';
 import { useState } from 'react';
-import { s3UploadHandler } from '~/utils/s3.server';
+import { PutObjectCommand, S3Client } from '@aws-sdk/client-s3';
+import { json, useLoaderData, useNavigate } from '@remix-run/react';
 
-type ActionData = {
-  errorMsg?: string;
-  imgSrc?: string;
-  imgDesc?: string;
-};
-
-export const action = async ({ request }: ActionFunctionArgs) => {
-  const uploadHandler: UploadHandler = composeUploadHandlers(s3UploadHandler, createMemoryUploadHandler());
-  const formData = await parseMultipartFormData(request, uploadHandler);
-  const imgSrc = formData.get('img');
-  if (!imgSrc) {
-    return json({
-      errorMsg: 'Something went wrong while uploading',
-    });
-  }
-  return redirect('/gallery');
+export const loader = async () => {
+  return json({
+    ENV: {
+      STORAGE_ACCESS_KEY: process.env.STORAGE_ACCESS_KEY || '',
+      STORAGE_SECRET: process.env.STORAGE_SECRET || '',
+      STORAGE_REGION: process.env.STORAGE_REGION || '',
+      STORAGE_BUCKET: process.env.STORAGE_BUCKET || '',
+    },
+  });
 };
 
 export default function Index() {
-  const fetcher = useFetcher<ActionData>();
+  const { ENV } = useLoaderData<typeof loader>();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const navigate = useNavigate();
+
+  const client = new S3Client({
+    credentials: {
+      accessKeyId: ENV.STORAGE_ACCESS_KEY,
+      secretAccessKey: ENV.STORAGE_SECRET,
+    },
+    region: ENV.STORAGE_REGION,
+  });
 
   return (
     <header
@@ -47,7 +41,7 @@ export default function Index() {
             <div className="display-t">
               <div className="display-tc animate-box" data-animate-effect="fadeIn">
                 <h1>Upload</h1>
-                <fetcher.Form method="post" encType="multipart/form-data" className="pt-2">
+                <form className="pt-2">
                   <div style={{ display: isSubmitting ? 'none' : 'block' }}>
                     <label htmlFor="img-field" className="btn">
                       Select images to upload
@@ -56,12 +50,24 @@ export default function Index() {
                       id="img-field"
                       type="file"
                       name="img"
-                      accept="image/*"
+                      accept="image/*,video/*"
                       style={{ display: 'none' }}
                       multiple
                       onChange={(event) => {
-                        setIsSubmitting(true);
-                        event.target.form?.submit();
+                        const uploadFile = async () => {
+                          setIsSubmitting(true);
+                          const commands = [...(event.target.files || [])]?.map(
+                            (file) =>
+                              new PutObjectCommand({
+                                Bucket: ENV.STORAGE_BUCKET,
+                                Key: `${Date.now()}-${file?.name.replace(/[^\w.]|_/g, '_')}`,
+                                Body: file,
+                              }),
+                          );
+                          await Promise.all(commands.map((command) => client.send(command)));
+                          navigate('/gallery');
+                        };
+                        uploadFile();
                       }}
                     />
                   </div>
@@ -76,7 +82,7 @@ export default function Index() {
                       </button>
                     </div>
                   )}
-                </fetcher.Form>
+                </form>
               </div>
             </div>
           </div>
