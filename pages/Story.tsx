@@ -1,4 +1,4 @@
-import { OurStory } from '../components/sections/OurStory';
+import { OurStory } from 'components/sections/OurStory';
 
 export const Story = () => {
   return (

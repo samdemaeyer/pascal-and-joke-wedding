@@ -1,7 +1,7 @@
 import { Countdown } from 'components/Countdown/Countdown';
-import { Couple } from '../components/sections/Couple';
-import { EventInfo } from '../components/sections/EventInfo';
-import { OurStory } from '../components/sections/OurStory';
+import { Couple } from 'components/sections/Couple';
+import { EventInfo } from 'components/sections/EventInfo';
+import { OurStory } from 'components/sections/OurStory';
 
 export const Homepage = () => {
   return (

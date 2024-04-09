@@ -1,8 +1,8 @@
 import { Links, Meta, NavLink, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
-import '../bootstrap.css';
-import '../App.css';
-import '../icomoon.css';
-import '../animate.min.css';
+import 'bootstrap.css';
+import 'App.css';
+import 'icomoon.css';
+import 'animate.min.css';
 import { LinksFunction, MetaFunction } from '@remix-run/node';
 import { Dispatch, useState } from 'react';
 

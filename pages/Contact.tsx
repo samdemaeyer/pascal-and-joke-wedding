@@ -1,4 +1,4 @@
-import { Couple } from '../components/sections/Couple';
+import { Couple } from 'components/sections/Couple';
 
 export const Contact = () => {
   return (
