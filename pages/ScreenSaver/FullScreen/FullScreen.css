@@ -70,6 +70,8 @@
   animation: var(--name) var(--duration) linear infinite;
   box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.5);
   z-index: 1;
+  border-radius: 5px;
+  border: 5px solid white;
 }
 
 .screensaver-wrapper .qr-code {
