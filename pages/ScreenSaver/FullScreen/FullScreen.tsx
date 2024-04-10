@@ -54,6 +54,14 @@ export const FullScreen = ({
         );
       })}
       <img className="qr-code" src="images/QR-code.png" alt="Scan this QR code to upload pictures" />
+      <button
+        className="close-btn"
+        onClick={() => {
+          setScreenSaverIsActive(false);
+        }}
+      >
+        <i className="icon-circle-cross"></i>
+      </button>
     </div>
   );
 };

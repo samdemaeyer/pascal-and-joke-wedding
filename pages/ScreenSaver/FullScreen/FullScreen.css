@@ -86,3 +86,24 @@
     display: none;
   }
 }
+
+.screensaver-wrapper .close-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 500;
+  font-size: 4rem;
+  background: none;
+  border: none;
+  color: white;
+  width: 10rem;
+  height: 10rem;
+}
+
+.screensaver-wrapper .close-btn i {
+  background: #0000004f;
+  border-radius: 50%;
+  padding: 1rem;
+  border: 1px solid #ffffff99;
+  z-index: 1003;
+}
