@@ -59,7 +59,7 @@
   background-color: black;
 }
 
-.screensaver-wrapper img {
+.screensaver-wrapper .slideshow-img {
   --duration: 40s;
   --name: float-up-1;
   position: absolute;
@@ -70,4 +70,10 @@
   animation: var(--name) var(--duration) linear infinite;
   box-shadow: 1px 3px 15px rgba(0, 0, 0, 0.5);
   z-index: 1;
+}
+
+.screensaver-wrapper .qr-code {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
 }

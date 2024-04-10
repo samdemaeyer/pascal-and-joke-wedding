@@ -48,23 +48,26 @@ export const FullScreen = ({
   }, [showAfter, activeSlide1, activeSlide2, activeIndex, data, setShowAfter]);
 
   return (
-    <div
-      className={`fullscreen-slideshow ${showAfter ? 'show-after' : ''}`}
-      style={
-        {
-          '--before-background': `url(${activeSlide1.src})`,
-          '--after-background': `url(${activeSlide2.src})`,
-        } as CSSProperties
-      }
-    >
-      <button
-        className="close-btn"
-        onClick={() => {
-          setSlideshowIsActive(false);
-        }}
+    <>
+      <div
+        className={`fullscreen-slideshow ${showAfter ? 'show-after' : ''}`}
+        style={
+          {
+            '--before-background': `url(${activeSlide1.src})`,
+            '--after-background': `url(${activeSlide2.src})`,
+          } as CSSProperties
+        }
       >
-        <i className="icon-circle-cross"></i>
-      </button>
-    </div>
+        <button
+          className="close-btn"
+          onClick={() => {
+            setSlideshowIsActive(false);
+          }}
+        >
+          <i className="icon-circle-cross"></i>
+        </button>
+      </div>
+      <img className="qr-code" src="images/QR-code.png" alt="Scan this QR code to upload pictures" />
+    </>
   );
 };

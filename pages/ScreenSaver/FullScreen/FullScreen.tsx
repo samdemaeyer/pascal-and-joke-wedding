@@ -40,6 +40,7 @@ export const FullScreen = ({
             src={photo.src}
             alt="Uploaded from wedding"
             key={i}
+            className="slideshow-img"
             style={
               {
                 '--name': `float-up-${selector}`,
@@ -52,6 +53,7 @@ export const FullScreen = ({
           />
         );
       })}
+      <img className="qr-code" src="images/QR-code.png" alt="Scan this QR code to upload pictures" />
     </div>
   );
 };

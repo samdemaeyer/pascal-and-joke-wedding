@@ -47,7 +47,14 @@
   opacity: 1;
 }
 
-.close-btn {
+.qr-code {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 1003;
+}
+
+.fullscreen-slideshow .close-btn {
   position: absolute;
   top: 0;
   right: 0;
@@ -60,9 +67,10 @@
   height: 10rem;
 }
 
-.close-btn i {
+.fullscreen-slideshow .close-btn i {
   background: #0000004f;
   border-radius: 50%;
   padding: 1rem;
   border: 1px solid #ffffff99;
+  z-index: 1003;
 }
