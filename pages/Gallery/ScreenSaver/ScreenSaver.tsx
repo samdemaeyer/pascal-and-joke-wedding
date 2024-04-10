@@ -1,10 +1,10 @@
 import { useEffect, useCallback } from 'react';
 import type { CSSProperties, Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
-import './FullScreen.css';
 import { QRCode } from 'components/QRCode/QRCode';
+import './ScreenSaver.css';
 
-export const FullScreen = ({
+export const ScreenSaver = ({
   photos,
   setScreenSaverIsActive,
 }: {

@@ -5,7 +5,7 @@
 }
 
 .qr-code {
-  position: absolute;
+  position: fixed;
   left: 2rem;
   bottom: 2rem;
   z-index: 1003;

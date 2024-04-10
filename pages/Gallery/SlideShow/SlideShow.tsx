@@ -2,19 +2,16 @@ import { useState, useEffect, useCallback } from 'react';
 import type { CSSProperties, Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
 import { QRCode } from 'components/QRCode/QRCode';
-import './FullScreen.css';
+import './SlideShow.css';
 
-export const FullScreen = ({
+export const SlideShow = ({
   data,
   setSlideshowIsActive,
-  setShowAfter,
-  showAfter,
 }: {
   data: Photo[];
   setSlideshowIsActive: Dispatch<React.SetStateAction<boolean>>;
-  setShowAfter: Dispatch<React.SetStateAction<boolean>>;
-  showAfter: boolean;
 }) => {
+  const [showAfter, setShowAfter] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeSlide1, setActiveSlide1] = useState(data[0]);
   const [activeSlide2, setActiveSlide2] = useState(data[1]);

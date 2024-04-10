@@ -35,6 +35,7 @@ export const Homepage = () => {
       </header>
       <Couple />
       <EventInfo />
+      <div id="map" className="fh5co-map"></div>
       <OurStory />
     </>
   );
