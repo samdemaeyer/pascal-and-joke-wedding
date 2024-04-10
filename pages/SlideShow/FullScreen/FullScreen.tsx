@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { CSSProperties, Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
+import { QRCode } from 'components/QRCode/QRCode';
 import './FullScreen.css';
 
 export const FullScreen = ({
@@ -67,7 +68,7 @@ export const FullScreen = ({
           <i className="icon-circle-cross"></i>
         </button>
       </div>
-      <img className="qr-code" src="images/QR-code.png" alt="Scan this QR code to upload pictures" />
+      <QRCode />
     </>
   );
 };

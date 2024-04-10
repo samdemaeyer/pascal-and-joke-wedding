@@ -1,0 +1,25 @@
+@media screen and (max-width: 768px) {
+  .qr-code {
+    display: none;
+  }
+}
+
+.qr-code {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 1003;
+  width: 25rem;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.qr-code img {
+  width: 100%;
+}
+
+.qr-code .title {
+  text-align: center;
+  font-size: 2.3rem;
+}

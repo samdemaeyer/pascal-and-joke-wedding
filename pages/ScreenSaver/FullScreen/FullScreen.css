@@ -74,19 +74,6 @@
   border: 5px solid white;
 }
 
-.screensaver-wrapper .qr-code {
-  position: absolute;
-  left: 2rem;
-  bottom: 2rem;
-  width: 25rem;
-}
-
-@media screen and (max-width: 768px) {
-  .screensaver-wrapper .qr-code {
-    display: none;
-  }
-}
-
 .screensaver-wrapper .close-btn {
   position: absolute;
   top: 0;

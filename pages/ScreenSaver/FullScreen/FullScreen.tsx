@@ -2,6 +2,7 @@ import { useEffect, useCallback } from 'react';
 import type { CSSProperties, Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
 import './FullScreen.css';
+import { QRCode } from 'components/QRCode/QRCode';
 
 export const FullScreen = ({
   photos,
@@ -53,7 +54,7 @@ export const FullScreen = ({
           />
         );
       })}
-      <img className="qr-code" src="images/QR-code.png" alt="Scan this QR code to upload pictures" />
+      <QRCode />
       <button
         className="close-btn"
         onClick={() => {
