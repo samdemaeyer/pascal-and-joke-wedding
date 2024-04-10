@@ -47,11 +47,18 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 768px) {
+  .qr-code {
+    display: none;
+  }
+}
+
 .qr-code {
   position: absolute;
   left: 2rem;
   bottom: 2rem;
   z-index: 1003;
+  width: 25rem;
 }
 
 .fullscreen-slideshow .close-btn {

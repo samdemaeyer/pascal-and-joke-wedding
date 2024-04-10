@@ -78,4 +78,11 @@
   position: absolute;
   left: 2rem;
   bottom: 2rem;
+  width: 25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .screensaver-wrapper .qr-code {
+    display: none;
+  }
 }
