@@ -63,6 +63,11 @@ const NavLinks = ({ setOffcanvasNavActive }: { setOffcanvasNavActive: Dispatch<R
       </NavLink>
     </li>
     <li>
+      <NavLink to="/screensaver" onClick={() => setOffcanvasNavActive(false)}>
+        Screensaver
+      </NavLink>
+    </li>
+    <li>
       <NavLink to="/upload" onClick={() => setOffcanvasNavActive(false)}>
         Upload
       </NavLink>

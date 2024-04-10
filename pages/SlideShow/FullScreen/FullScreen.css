@@ -1,9 +1,10 @@
 @keyframes zoomInAndOut {
   0% {
     transform: scale(100%);
+    margin: 0;
   }
   50% {
-    transform: scale(110%);
+    transform: scale(130%);
   }
   100% {
     transform: scale(100%);
@@ -31,7 +32,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  animation: zoomInAndOut 8s infinite;
+  animation: zoomInAndOut 20s infinite;
 }
 
 .fullscreen-slideshow::before {
