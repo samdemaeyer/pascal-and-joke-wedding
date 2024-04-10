@@ -39,7 +39,7 @@ export const Contact = () => {
                     const lname = formData.get('lname');
                     const subject = formData.get('subject');
                     const message = formData.get('message');
-                    window.location.href = `mailto:user@example.com?subject=${subject}&body=${fname}%20${lname}%0D%0A%0D%0A${message}`;
+                    window.location.href = `mailto:sophie_swennen@hotmail.com?subject=${subject}&body=${fname}%20${lname}%0D%0A%0D%0A${message}`;
                   }}
                 >
                   <div className="row form-group">
@@ -101,7 +101,7 @@ export const Contact = () => {
                       <a href="tel://+32497229735">+32 (0) 497229735</a>
                     </li>
                     <li className="email">
-                      <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                      <a href="mailto: sophie_swennen@hotmail.com"> sophie_swennen@hotmail.com</a>
                     </li>
                   </ul>
                 </div>
