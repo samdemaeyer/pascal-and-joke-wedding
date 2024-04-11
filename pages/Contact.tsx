@@ -1,4 +1,4 @@
-import { Couple } from 'components/sections/Couple';
+import { EventInfo } from 'components/sections/EventInfo';
 import { SyntheticEvent } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 
@@ -24,7 +24,6 @@ export const Contact = () => {
           </div>
         </div>
       </header>
-      <Couple />
       <div className="fh5co-section">
         <div className="container">
           <div className="row">
@@ -110,6 +109,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
+      <EventInfo />
     </>
   );
 };

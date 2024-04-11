@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { Photo, PhotoItem } from 'components/PhotoItem/PhotoItem';
-import './Gallery.css';
+import { ENV, UploadButton } from 'components/UploadButton/UploadButton';
 import { SlideShow } from './SlideShow/SlideShow';
 import { ScreenSaver } from './ScreenSaver/ScreenSaver';
-import { ENV, UploadButton } from 'components/UploadButton/UploadButton';
+import './Gallery.css';
 
 export const Gallery = ({ data, env }: { data: Photo[]; env: ENV }) => {
   const [slideshowIsActive, setSlideshowIsActive] = useState(false);
