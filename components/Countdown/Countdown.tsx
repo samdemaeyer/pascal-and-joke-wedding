@@ -26,7 +26,7 @@ const getReturnValues = (countDown: number) => {
 };
 
 export const Countdown = () => {
-  const [days, hours, minutes, seconds] = useCountdown(new Date('2024-05-18 13:00:00'));
+  const [days, hours, minutes, seconds] = useCountdown(new Date('2024-05-18 12:00:00'));
 
   return (
     <div className="simply-countdown simply-countdown-one">
