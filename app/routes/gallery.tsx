@@ -14,6 +14,8 @@ export const loader = async () => {
   });
   const command = new ListObjectsCommand({ Bucket: process.env.STORAGE_BUCKET });
   const data = await client.send(command);
+  data.Contents?.sort((a, b) => new Date(b.LastModified || '').valueOf() - new Date(a.LastModified || '').valueOf());
+
   return {
     data: data.Contents?.map((c) => ({ src: `https://wedding-joke.s3.eu-west-3.amazonaws.com/${c.Key}` })),
     ENV: {

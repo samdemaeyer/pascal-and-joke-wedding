@@ -3,6 +3,7 @@ import type { CSSProperties, Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
 import { QRCode } from 'components/QRCode/QRCode';
 import './SlideShow.css';
+import { useRevalidator } from '@remix-run/react';
 
 export const SlideShow = ({
   data,
@@ -15,6 +16,7 @@ export const SlideShow = ({
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeSlide1, setActiveSlide1] = useState(data[0]);
   const [activeSlide2, setActiveSlide2] = useState(data[1]);
+  const revalidator = useRevalidator();
 
   const escFunction = useCallback(
     (event: KeyboardEvent) => {
@@ -44,6 +46,15 @@ export const SlideShow = ({
 
     return () => clearInterval(timer);
   }, [showAfter, activeSlide1, activeSlide2, activeIndex, data, setShowAfter]);
+
+  useEffect(() => {
+    const polling = 300000; // 5 minutes
+    const timer = setInterval(() => {
+      revalidator.revalidate();
+    }, polling);
+
+    return () => clearInterval(timer);
+  }, [revalidator]);
 
   return (
     <>
