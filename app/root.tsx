@@ -98,6 +98,27 @@ export default function App() {
         </div>
       </nav>
       <Outlet />
+      <footer id="fh5co-footer" role="contentinfo">
+        <div className="container">
+          <div className="row copyright">
+            <div className="col-md-12 text-center">
+              <p>
+                <small className="block">&copy; 2024, all Rights Reserved.</small>
+                <small className="block">
+                  Designed by{' '}
+                  <a href="http://freehtml5.co/" target="_blank" rel="noreferrer">
+                    FREEHTML5.co
+                  </a>{' '}
+                  Implemented by:{' '}
+                  <a href="https://www.linkedin.com/in/sdemaeyer/" target="_blank" rel="noreferrer">
+                    Sam De Maeyer
+                  </a>
+                </small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
