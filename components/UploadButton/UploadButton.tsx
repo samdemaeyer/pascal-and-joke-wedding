@@ -31,7 +31,7 @@ export const UploadButton = ({ env }: { env: ENV }) => {
           id="img-field"
           type="file"
           name="img"
-          accept="image/*,video/*"
+          accept="image/*"
           style={{ display: 'none' }}
           multiple
           onChange={(event) => {
