@@ -1,7 +1,9 @@
+import { useRevalidator } from '@remix-run/react';
 import { useEffect, useCallback } from 'react';
-import type { CSSProperties, Dispatch } from 'react';
+import type { Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
 import { QRCode } from 'components/QRCode/QRCode';
+import { Image } from './Image/Image';
 import './ScreenSaver.css';
 
 export const ScreenSaver = ({
@@ -11,6 +13,7 @@ export const ScreenSaver = ({
   photos: Photo[];
   setScreenSaverIsActive: Dispatch<React.SetStateAction<boolean>>;
 }) => {
+  const revalidator = useRevalidator();
   const escFunction = useCallback(
     (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -28,39 +31,30 @@ export const ScreenSaver = ({
     };
   }, [escFunction]);
 
-  let delay = 0;
+  useEffect(() => {
+    const polling = 300000; // `300000` === 5 minutes
+    const timer = setInterval(() => {
+      revalidator.revalidate();
+    }, polling);
+
+    return () => clearInterval(timer);
+  }, [revalidator]);
+
+  const intervals = [3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500];
+
+  const chunkSize = Math.ceil(photos.length / intervals.length);
+  const splitData = Array.from({ length: intervals.length }, (_, i) =>
+    photos.slice(i * chunkSize, i * chunkSize + chunkSize),
+  );
 
   return (
     <div className="screensaver-wrapper">
-      {photos.map((photo, i) => {
-        delay = delay + 3;
-        const selector = Math.floor(Math.random() * (3 - 1 + 1) + 1);
-        const left = `${Math.floor(Math.random() * (100 - -20 + 1) + -20)}vw`;
-        return (
-          <img
-            src={photo.src}
-            alt="Uploaded from wedding"
-            key={i}
-            className="slideshow-img"
-            style={
-              {
-                '--name': `float-up-${selector}`,
-                '--duration': `calc(20s * ${selector})`,
-                animationDelay: `-${delay}s`,
-                zIndex: `-${selector}`,
-                left,
-              } as CSSProperties
-            }
-          />
-        );
-      })}
+      {splitData.map(
+        (groupedPhotos, index) =>
+          groupedPhotos.length && <Image key={index} photos={groupedPhotos} intervalTime={intervals[index]} />,
+      )}
       <QRCode />
-      <button
-        className="close-btn"
-        onClick={() => {
-          setScreenSaverIsActive(false);
-        }}
-      >
+      <button className="close-btn" onClick={() => setScreenSaverIsActive(false)}>
         <i className="icon-circle-cross"></i>
       </button>
     </div>
