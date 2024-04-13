@@ -40,7 +40,7 @@ export const ScreenSaver = ({
     return () => clearInterval(timer);
   }, [revalidator]);
 
-  const intervals = [3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500];
+  const intervals = [3000, 3500, 4000, 4500, 5000, 5500, 6000, 6500, 7000, 7500, 8000];
 
   const chunkSize = Math.ceil(photos.length / intervals.length);
   const splitData = Array.from({ length: intervals.length }, (_, i) =>
@@ -49,9 +49,8 @@ export const ScreenSaver = ({
 
   return (
     <div className="screensaver-wrapper">
-      {splitData.map(
-        (groupedPhotos, index) =>
-          groupedPhotos.length && <Image key={index} photos={groupedPhotos} intervalTime={intervals[index]} />,
+      {splitData.map((groupedPhotos, index) =>
+        groupedPhotos.length ? <Image key={index} photos={groupedPhotos} intervalTime={intervals[index]} /> : null,
       )}
       <QRCode />
       <button className="close-btn" onClick={() => setScreenSaverIsActive(false)}>

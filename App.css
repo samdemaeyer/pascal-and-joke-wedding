@@ -1925,11 +1925,3 @@ form label {
 .pt-2 {
   padding-top: 2rem;
 }
-
-/* Upload button */
-
-.uploading-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}

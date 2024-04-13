@@ -1,0 +1,22 @@
+.uploading-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.uploading-percentage {
+  position: relative;
+  overflow: hidden;
+}
+
+.uploading-percentage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #f3579b3b;
+  width: var(--uploading-percentage);
+  transition: width 0.3s ease-in-out;
+  height: 100%;
+}

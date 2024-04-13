@@ -169,14 +169,20 @@
 .screensaver-wrapper .slideshow-img:nth-child(9) {
   --name: float-up-1;
   --duration: calc(20s * 1);
-  left: 68vw;
+  left: 74vw;
   z-index: -1;
 }
 .screensaver-wrapper .slideshow-img:nth-child(10) {
   --name: float-up-2;
   --duration: calc(20s * 2);
-  left: 0vw;
+  left: 44vw;
   z-index: -2;
+}
+.screensaver-wrapper .slideshow-img:nth-child(11) {
+  --name: float-up-3;
+  --duration: calc(20s * 3);
+  left: 24vw;
+  z-index: -3;
 }
 
 .screensaver-wrapper .close-btn {
