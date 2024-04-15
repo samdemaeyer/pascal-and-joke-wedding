@@ -49,12 +49,12 @@ const NavLinks = ({ setOffcanvasNavActive }: { setOffcanvasNavActive: Dispatch<R
     </li>
     <li>
       <NavLink to="/story" onClick={() => setOffcanvasNavActive(false)}>
-        Story
+        Ons Verhaal
       </NavLink>
     </li>
     <li>
       <NavLink to="/gallery" onClick={() => setOffcanvasNavActive(false)}>
-        Gallery
+        Galerij
       </NavLink>
     </li>
     <li>
@@ -87,7 +87,7 @@ export default function App() {
             <div className="col-xs-2">
               <div id="fh5co-logo">
                 <NavLink to="/" onClick={() => setOffcanvasNavActive(false)}>
-                  Wedding<strong>.</strong>
+                  Trouw<strong>.</strong>
                 </NavLink>
               </div>
             </div>

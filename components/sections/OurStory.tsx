@@ -6,7 +6,7 @@ export const OurStory = () => (
       <div className="row">
         <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
           <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
-            <span>We Love Each Other</span>
+            <span>Wij Houden Van Elkaar</span>
             <h2>Ons Verhaal</h2>
             <p>Heel lang geleden, toen de dieren nog konden praten was er eens ...</p>
           </ScrollAnimation>

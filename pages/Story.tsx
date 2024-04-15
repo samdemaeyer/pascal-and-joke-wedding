@@ -15,7 +15,7 @@ export const Story = () => {
             <div className="col-md-8 col-md-offset-2 text-center">
               <div className="display-t">
                 <div className="display-tc animate-box" data-animate-effect="fadeIn">
-                  <h1>Our Story</h1>
+                  <h1>Ons verhaal</h1>
                 </div>
               </div>
             </div>

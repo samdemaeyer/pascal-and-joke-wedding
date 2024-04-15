@@ -53,7 +53,7 @@ export const UploadButton = ({ env }: { env: ENV }) => {
     <form className="pt-2">
       <div style={{ display: isUploading ? 'none' : 'block' }}>
         <label htmlFor="img-field" className="btn">
-          <i className="icon-cloud-upload" /> Select images to upload
+          <i className="icon-cloud-upload" /> Selecteer you foto&apos;s
         </label>
         <input
           id="img-field"
@@ -74,7 +74,7 @@ export const UploadButton = ({ env }: { env: ENV }) => {
             <div className="uploading-btn">
               {isUploaded ? (
                 <>
-                  <i className="icon-check" /> Upload complete
+                  <i className="icon-check" /> Upload compleet
                 </>
               ) : (
                 <>

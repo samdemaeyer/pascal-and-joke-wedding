@@ -12,8 +12,8 @@ export const ComingSoon = () => (
           <div className="col-md-8 col-md-offset-2 text-center">
             <div className="display-t">
               <div className="display-tc animate-box" data-animate-effect="fadeIn">
-                <h1>Gallery</h1>
-                <h2>Coming soon</h2>
+                <h1>Galerij</h1>
+                <h2>Binnenkort beschikbaar</h2>
               </div>
             </div>
           </div>
@@ -22,12 +22,12 @@ export const ComingSoon = () => (
     </header>
     <div className="container" style={{ marginTop: '2rem' }}>
       <div className="jumbotron">
-        <h2 className="display-4 h1">The Gallery</h2>
-        <p className="lead">This Gallery will be activated on the day of the wedding</p>
+        <h2 className="display-4 h1">De Galerij</h2>
+        <p className="lead">Deze galerij wordt geactiveerd op de dag van de bruiloft</p>
         <hr className="my-4" />
         <p>
-          You will be able to upload your own pictures of the wedding and they will be displayed here. There will also
-          be some preview functionalities available
+          kunt uw eigen foto&apos;s van de bruiloft uploaden en deze worden hier weergegeven. Er zal ook er zijn enkele
+          preview-functionaliteiten beschikbaar
         </p>
       </div>
     </div>

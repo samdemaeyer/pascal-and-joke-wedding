@@ -8,7 +8,7 @@ export const Couple = () => (
           <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
             <h2>Hello!</h2>
             <h3>18 Mei 2016 - Diepenbeek</h3>
-            <p>Staying away is not an option</p>
+            <p>Staying away is not an option!</p>
           </ScrollAnimation>
         </div>
       </div>

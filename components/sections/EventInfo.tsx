@@ -12,8 +12,8 @@ export const EventInfo = () => (
         <div className="row">
           <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
             <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
-              <span>Our Special Events</span>
-              <h2>Wedding Events</h2>
+              <span>Ons Speciaal Event</span>
+              <h2>Trouw details</h2>
             </ScrollAnimation>
           </div>
         </div>
@@ -28,9 +28,11 @@ export const EventInfo = () => (
                       <div className="event-col">
                         <i className="icon-clock"></i>
                         <span>13:00 uur</span>
+                        <span>13:30 uur</span>
                       </div>
                       <div className="event-col">
                         <i className="icon-calendar"></i>
+                        <span>Zaterdag</span>
                         <span>18 Mei, 2024</span>
                       </div>
                       <p>
@@ -47,9 +49,11 @@ export const EventInfo = () => (
                       <div className="event-col">
                         <i className="icon-clock"></i>
                         <span>20:00 uur</span>
+                        <span>04:00 uur</span>
                       </div>
                       <div className="event-col">
                         <i className="icon-calendar"></i>
+                        <span>Zaterdag</span>
                         <span>18 Mei, 2024</span>
                       </div>
                       <p>

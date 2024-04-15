@@ -17,7 +17,7 @@ export const Contact = () => {
             <div className="col-md-8 col-md-offset-2 text-center">
               <div className="display-t">
                 <div className="display-tc animate-box" data-animate-effect="fadeIn">
-                  <h1>Contact Us</h1>
+                  <h1>Contacteer Ons</h1>
                 </div>
               </div>
             </div>
@@ -43,49 +43,43 @@ export const Contact = () => {
                 >
                   <div className="row form-group">
                     <div className="col-md-6">
-                      <label htmlFor="fname">First Name</label>
-                      <input
-                        type="text"
-                        id="fname"
-                        name="fname"
-                        className="form-control"
-                        placeholder="Your firstname"
-                      />
+                      <label htmlFor="fname">Voornaam</label>
+                      <input type="text" id="fname" name="fname" className="form-control" placeholder="Jou voornaam" />
                     </div>
                     <div className="col-md-6">
-                      <label htmlFor="lname">Last Name</label>
-                      <input type="text" id="lname" name="lname" className="form-control" placeholder="Your lastname" />
+                      <label htmlFor="lname">Achtrnaam</label>
+                      <input type="text" id="lname" name="lname" className="form-control" placeholder="Jou achtrnaam" />
                     </div>
                   </div>
 
                   <div className="row form-group">
                     <div className="col-md-12">
-                      <label htmlFor="subject">Subject</label>
+                      <label htmlFor="subject">Onderwerp</label>
                       <input
                         type="text"
                         id="subject"
                         name="subject"
                         className="form-control"
-                        placeholder="Your subject of this message"
+                        placeholder="Jou onderwerp voor dit bericht"
                       />
                     </div>
                   </div>
 
                   <div className="row form-group">
                     <div className="col-md-12">
-                      <label htmlFor="message">Message</label>
+                      <label htmlFor="message">Bericht</label>
                       <textarea
                         name="message"
                         id="message"
                         cols={30}
                         rows={10}
                         className="form-control"
-                        placeholder="Write us something"
+                        placeholder="Schrijf ons iets"
                       ></textarea>
                     </div>
                   </div>
                   <div className="form-group">
-                    <input type="submit" value="Send Message" className="btn btn-primary" />
+                    <input type="submit" value="Verzend Bericht" className="btn btn-primary" />
                   </div>
                 </form>
               </div>

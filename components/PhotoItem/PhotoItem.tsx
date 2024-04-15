@@ -11,7 +11,7 @@ export const PhotoItem = ({ photo, collection, index }: { photo: Photo; collecti
       <li>
         <img src={photo.src} alt="Uploaded from wedding" />
         <button className="overlay" onClick={() => setExpandedSrc(photo.src)}>
-          <span>Click to enlarge</span>
+          <span>Klik om te vergroten</span>
         </button>
       </li>
       {expandedSrc && (

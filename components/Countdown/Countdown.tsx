@@ -35,25 +35,25 @@ export const Countdown = () => {
       <div className="simply-section simply-days-section">
         <div>
           <span className="simply-amount">{formatUnit(days)}</span>
-          <span className="simply-word">days</span>
+          <span className="simply-word">Dagen</span>
         </div>
       </div>
       <div className="simply-section simply-hours-section">
         <div>
           <span className="simply-amount">{formatUnit(hours)}</span>
-          <span className="simply-word">hours</span>
+          <span className="simply-word">Uren</span>
         </div>
       </div>
       <div className="simply-section simply-minutes-section">
         <div>
           <span className="simply-amount">{formatUnit(minutes)}</span>
-          <span className="simply-word">minutes</span>
+          <span className="simply-word">Minuten</span>
         </div>
       </div>
       <div className="simply-section simply-seconds-section">
         <div>
           <span className="simply-amount">{formatUnit(seconds)}</span>
-          <span className="simply-word">seconds</span>
+          <span className="simply-word">Seconden</span>
         </div>
       </div>
     </div>
