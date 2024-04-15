@@ -1,6 +1,6 @@
 import { LinksFunction, MetaFunction } from '@remix-run/node';
 import { Links, Meta, NavLink, Outlet, Scripts, ScrollRestoration } from '@remix-run/react';
-import { Dispatch, useState } from 'react';
+import { Dispatch, useEffect, useState } from 'react';
 import 'bootstrap.css';
 import 'App.css';
 import 'icomoon.css';
@@ -67,58 +67,72 @@ const NavLinks = ({ setOffcanvasNavActive }: { setOffcanvasNavActive: Dispatch<R
 
 export default function App() {
   const [offcanvasNavActive, setOffcanvasNavActive] = useState(false);
+  const [showGoToTopBtn, setShowGoToTopBtn] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', () => setShowGoToTopBtn(window.scrollY > 200));
+  }, []);
 
   return (
-    <div className="App" id="page">
-      <button
-        className={`js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white ${offcanvasNavActive ? 'active' : ''}`}
-        onClick={() => setOffcanvasNavActive(!offcanvasNavActive)}
-      >
-        <i></i>
-      </button>
-      <div className={offcanvasNavActive ? 'offcanvas' : ''}>
-        <div id="fh5co-offcanvas">
-          <NavLinks setOffcanvasNavActive={setOffcanvasNavActive} />
+    <>
+      <div className="App" id="page">
+        <button
+          className={`js-fh5co-nav-toggle fh5co-nav-toggle fh5co-nav-white ${offcanvasNavActive ? 'active' : ''}`}
+          onClick={() => setOffcanvasNavActive(!offcanvasNavActive)}
+        >
+          <i></i>
+        </button>
+        <div className={offcanvasNavActive ? 'offcanvas' : ''}>
+          <div id="fh5co-offcanvas">
+            <NavLinks setOffcanvasNavActive={setOffcanvasNavActive} />
+          </div>
         </div>
-      </div>
-      <nav className="fh5co-nav" role="navigation">
-        <div className="container">
-          <div className="row">
-            <div className="col-xs-2">
-              <div id="fh5co-logo">
-                <NavLink to="/" onClick={() => setOffcanvasNavActive(false)}>
-                  Trouw<strong>.</strong>
-                </NavLink>
+        <nav className="fh5co-nav" role="navigation">
+          <div className="container">
+            <div className="row">
+              <div className="col-xs-2">
+                <div id="fh5co-logo">
+                  <NavLink to="/" onClick={() => setOffcanvasNavActive(false)}>
+                    Trouw<strong>.</strong>
+                  </NavLink>
+                </div>
+              </div>
+              <div className="col-xs-10 text-right menu-1">
+                <NavLinks setOffcanvasNavActive={setOffcanvasNavActive} />
               </div>
             </div>
-            <div className="col-xs-10 text-right menu-1">
-              <NavLinks setOffcanvasNavActive={setOffcanvasNavActive} />
+          </div>
+        </nav>
+        <Outlet />
+        <footer id="fh5co-footer" role="contentinfo">
+          <div className="container">
+            <div className="row copyright">
+              <div className="col-md-12 text-center">
+                <p>
+                  <small className="block">&copy; 2024, all Rights Reserved.</small>
+                  <small className="block">
+                    Designed by{' '}
+                    <a href="http://freehtml5.co/" target="_blank" rel="noreferrer">
+                      FREEHTML5.co
+                    </a>{' '}
+                    Implemented by:{' '}
+                    <a href="https://www.linkedin.com/in/sdemaeyer/" target="_blank" rel="noreferrer">
+                      Sam De Maeyer
+                    </a>
+                  </small>
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-      </nav>
-      <Outlet />
-      <footer id="fh5co-footer" role="contentinfo">
-        <div className="container">
-          <div className="row copyright">
-            <div className="col-md-12 text-center">
-              <p>
-                <small className="block">&copy; 2024, all Rights Reserved.</small>
-                <small className="block">
-                  Designed by{' '}
-                  <a href="http://freehtml5.co/" target="_blank" rel="noreferrer">
-                    FREEHTML5.co
-                  </a>{' '}
-                  Implemented by:{' '}
-                  <a href="https://www.linkedin.com/in/sdemaeyer/" target="_blank" rel="noreferrer">
-                    Sam De Maeyer
-                  </a>
-                </small>
-              </p>
-            </div>
+        </footer>
+      </div>
+      <div className={`gototop js-top ${showGoToTopBtn ? 'active' : ''}`}>
+        <button className="gototop-btn" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div className="js-gotop">
+            <i className="icon-arrow-up"></i>
           </div>
-        </div>
-      </footer>
-    </div>
+        </button>
+      </div>
+    </>
   );
 }

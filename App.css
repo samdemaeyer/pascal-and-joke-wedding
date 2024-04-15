@@ -1570,7 +1570,13 @@ form label {
   opacity: 1;
   visibility: visible;
 }
-.gototop a {
+
+.gototop .gototop-btn {
+  border: none;
+  background: none;
+}
+
+.gototop .js-gotop {
   width: 50px;
   height: 50px;
   display: table;
@@ -1582,14 +1588,14 @@ form label {
   -ms-border-radius: 4px;
   border-radius: 4px;
 }
-.gototop a i {
+.gototop .js-gotop i {
   height: 50px;
   display: table-cell;
   vertical-align: middle;
 }
-.gototop a:hover,
-.gototop a:active,
-.gototop a:focus {
+.gototop .js-gotop:hover,
+.gototop .js-gotop:active,
+.gototop .js-gotop:focus {
   text-decoration: none;
   outline: none;
 }
