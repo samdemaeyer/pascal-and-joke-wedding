@@ -21,8 +21,10 @@ export const Couple = () => (
             <div className="desc-groom">
               <h3>Joke De Maeyer</h3>
               <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts. Separated they live in Bookmarksgrove
+                Joke, geboren op 3 Oktober 1985 in Hasselt. Groeide op in Deurne. Op 12 jarige leeftijd verhuisde ze
+                naar Hasselt waar ze uiteindelijk studeerde als kapster. Na enkele jobs aan de kassa, begon ze dan in de
+                Pearl. Hier sloeg de passie voor optiek over en werkte haar weg up en opende uiteindelijk haar eigen
+                winkel in Diepenbeek.
               </p>
             </div>
           </div>
@@ -36,8 +38,10 @@ export const Couple = () => (
             <div className="desc-bride">
               <h3>Pascal Van Ootegem</h3>
               <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the
-                blind texts. Separated they live in Bookmarksgrove
+                Pascal is op 24 januari geboren in Aarle. Daar is hij als kleuter opgegroeid. Later is hij met z’n
+                familie verhuist naar Leopoldsburg, waar hij het grootste deel van z’n jeugd heeft doorgebracht. Als
+                jonge man is hij uiteindelijk neergestreken in Hasselt. Samen met Joke & Nicole woont hij nu in hun huis
+                in Diepenbeek.
               </p>
             </div>
           </div>
