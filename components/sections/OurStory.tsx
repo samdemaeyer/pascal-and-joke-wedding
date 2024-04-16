@@ -20,7 +20,7 @@ export const OurStory = () => (
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">De Eerste Ontmoeting</h3>
-                  <span className="date">December ????? 2016</span>
+                  <span className="date">Februari 2016</span>
                 </div>
                 <div className="timeline-body">
                   <p>
@@ -71,7 +71,7 @@ export const OurStory = () => (
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">De Viervoeters</h3>
-                  <span className="date">Januari ????? 2022</span>
+                  <span className="date">Augustus 2022</span>
                 </div>
                 <div className="timeline-body">
                   <p>
