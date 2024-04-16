@@ -7,7 +7,7 @@ export const Couple = () => (
         <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
           <ScrollAnimation animateIn="animate__fadeInUp" animateOnce>
             <h2>Hello!</h2>
-            <h3>18 Mei 2016 - Diepenbeek</h3>
+            <h3>18 Mei 2024 - Diepenbeek</h3>
             <p>Staying away is not an option!</p>
           </ScrollAnimation>
         </div>
@@ -38,7 +38,7 @@ export const Couple = () => (
             <div className="desc-bride">
               <h3>Pascal Van Ootegem</h3>
               <p>
-                Pascal is op 24 januari geboren in Aarle. Daar is hij als kleuter opgegroeid. Later is hij met z’n
+                Pascal is op 24 januari geboren in Aarlen. Daar is hij als kleuter opgegroeid. Later is hij met z’n
                 familie verhuist naar Leopoldsburg, waar hij het grootste deel van z’n jeugd heeft doorgebracht. Als
                 jonge man is hij uiteindelijk neergestreken in Hasselt. Samen met Joke & Nicole woont hij nu in hun huis
                 in Diepenbeek.
