@@ -32,7 +32,7 @@ export const ScreenSaver = ({
   }, [escFunction]);
 
   useEffect(() => {
-    const polling = 300000; // `300000` === 5 minutes
+    const polling = 150000; // `150000` === 2.5 minutes
     const timer = setInterval(() => {
       revalidator.revalidate();
     }, polling);

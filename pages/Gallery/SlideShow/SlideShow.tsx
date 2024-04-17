@@ -48,7 +48,7 @@ export const SlideShow = ({
   }, [showAfter, activeSlide1, activeSlide2, activeIndex, data, setShowAfter]);
 
   useEffect(() => {
-    const polling = 300000; // 5 minutes
+    const polling = 150000; // 2.5 minutes
     const timer = setInterval(() => {
       revalidator.revalidate();
     }, polling);
