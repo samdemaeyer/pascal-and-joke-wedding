@@ -50,6 +50,22 @@ export const OurStory = () => (
               </ScrollAnimation>
             </li>
             <li className="animate-box">
+              <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-2.jpg)' }}></div>
+              <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
+                <div className="timeline-heading">
+                  <h3 className="timeline-title">De winkel</h3>
+                  <span className="date">Oktober 2017</span>
+                </div>
+                <div className="timeline-body">
+                  <p>
+                    Bij de Pearle, waar Joke werkte, vond ze haar ware passie voor optiek. Ze volgde een avondopleiding
+                    tot opticien en behaalde haar diploma als opticien/optometrist. In oktober 2017 opende ze haar eigen
+                    Pearle-winkel in het centrum van Diepenbeek.
+                  </p>
+                </div>
+              </ScrollAnimation>
+            </li>
+            <li className="timeline-inverted animate-box">
               <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-3.jpg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
@@ -66,7 +82,7 @@ export const OurStory = () => (
                 </div>
               </ScrollAnimation>
             </li>
-            <li className="timeline-inverted animate-box">
+            <li className="animate-box">
               <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-2.jpg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
@@ -82,7 +98,7 @@ export const OurStory = () => (
                 </div>
               </ScrollAnimation>
             </li>
-            <li className="animate-box">
+            <li className="timeline-inverted animate-box">
               <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-3.jpg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">

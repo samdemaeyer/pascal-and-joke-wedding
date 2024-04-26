@@ -21,10 +21,9 @@ export const Couple = () => (
             <div className="desc-groom">
               <h3>Joke De Maeyer</h3>
               <p>
-                Joke, geboren op 3 Oktober 1985 in Hasselt. Groeide op in Deurne. Op 12 jarige leeftijd verhuisde ze
-                naar Hasselt waar ze uiteindelijk studeerde als kapster. Na enkele jobs aan de kassa, begon ze dan in de
-                Pearl. Hier sloeg de passie voor optiek over en werkte haar weg up en opende uiteindelijk haar eigen
-                winkel in Diepenbeek.
+                Joke, geboren op 3 Oktober 1985 in Hasselt. Ze groeide op in Deurne, en op 12 jarige leeftijd verhuisde
+                ze naar Hasselt waar ze uiteindelijk studeerde als opvoedster (jeugd- en gehandicaptenzorg). Na enkele
+                jobs aan de kassa, begon ze bij Pearle. Hier sloeg de passie voor optiek.
               </p>
             </div>
           </div>

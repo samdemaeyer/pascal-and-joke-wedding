@@ -10,7 +10,10 @@ export const Homepage = () => {
         id="fh5co-header"
         className="fh5co-cover"
         role="banner"
-        style={{ backgroundImage: 'url(images/img_bg_2.jpg)' }}
+        style={{
+          backgroundImage:
+            'url(images/miniature-bride-and-groom-standing-outdoors-with-a-blurry-nature-background-free-photo.jpg)',
+        }}
         data-stellar-background-ratio="0.5"
       >
         <div className="overlay"></div>

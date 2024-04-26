@@ -2,7 +2,7 @@ import { useRevalidator } from '@remix-run/react';
 import { useEffect, useCallback } from 'react';
 import type { Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
-// import { QRCode } from 'components/QRCode/QRCode';
+import { QRCode } from 'components/QRCode/QRCode';
 import { Image } from './Image/Image';
 import './ScreenSaver.css';
 
@@ -52,7 +52,7 @@ export const ScreenSaver = ({
       {splitData.map((groupedPhotos, index) =>
         groupedPhotos.length ? <Image key={index} photos={groupedPhotos} intervalTime={intervals[index]} /> : null,
       )}
-      {/* <QRCode /> */}
+      <QRCode />
       <button className="close-btn" onClick={() => setScreenSaverIsActive(false)}>
         <i className="icon-circle-cross"></i>
       </button>

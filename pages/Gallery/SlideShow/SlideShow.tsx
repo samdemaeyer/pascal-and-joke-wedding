@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import type { CSSProperties, Dispatch } from 'react';
 import { Photo } from 'components/PhotoItem/PhotoItem';
-// import { QRCode } from 'components/QRCode/QRCode';
+import { QRCode } from 'components/QRCode/QRCode';
 import './SlideShow.css';
 import { useRevalidator } from '@remix-run/react';
 
@@ -76,7 +76,7 @@ export const SlideShow = ({
           <i className="icon-circle-cross"></i>
         </button>
       </div>
-      {/* <QRCode /> */}
+      <QRCode />
     </>
   );
 };
