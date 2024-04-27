@@ -2,8 +2,11 @@ import { Countdown } from 'components/Countdown/Countdown';
 import { Couple } from 'components/sections/Couple';
 import { EventInfo } from 'components/sections/EventInfo';
 import { OurStory } from 'components/sections/OurStory';
+import { useWindowScroll } from 'hooks/windowScroll';
 
 export const Homepage = () => {
+  const { backgroundPosition } = useWindowScroll();
+
   return (
     <>
       <header
@@ -13,6 +16,7 @@ export const Homepage = () => {
         style={{
           backgroundImage:
             'url(images/miniature-bride-and-groom-standing-outdoors-with-a-blurry-nature-background-free-photo.jpg)',
+          backgroundPosition,
         }}
         data-stellar-background-ratio="0.5"
       >

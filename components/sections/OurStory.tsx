@@ -16,7 +16,7 @@ export const OurStory = () => (
         <div className="col-md-12 col-md-offset-0">
           <ul className="timeline animate-box">
             <li className="animate-box">
-              <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-1.jpg)' }}></div>
+              <div className="timeline-badge" style={{ backgroundImage: 'url(images/first-meeting.jpeg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">De Eerste Ontmoeting</h3>
@@ -33,7 +33,7 @@ export const OurStory = () => (
               </ScrollAnimation>
             </li>
             <li className="timeline-inverted animate-box">
-              <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-2.jpg)' }}></div>
+              <div className="timeline-badge" style={{ backgroundImage: 'url(images/joke-and-pascal.jpeg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">In een relatie</h3>
@@ -50,7 +50,7 @@ export const OurStory = () => (
               </ScrollAnimation>
             </li>
             <li className="animate-box">
-              <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-2.jpg)' }}></div>
+              <div className="timeline-badge" style={{ backgroundImage: 'url(images/shop.jpeg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">De winkel</h3>
@@ -66,7 +66,7 @@ export const OurStory = () => (
               </ScrollAnimation>
             </li>
             <li className="timeline-inverted animate-box">
-              <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-3.jpg)' }}></div>
+              <div className="timeline-badge" style={{ backgroundImage: 'url(images/house.jpeg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">Het Droomhuis</h3>
@@ -83,7 +83,7 @@ export const OurStory = () => (
               </ScrollAnimation>
             </li>
             <li className="animate-box">
-              <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-2.jpg)' }}></div>
+              <div className="timeline-badge" style={{ backgroundImage: 'url(images/dogs.jpeg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">De Viervoeters</h3>
@@ -99,7 +99,7 @@ export const OurStory = () => (
               </ScrollAnimation>
             </li>
             <li className="timeline-inverted animate-box">
-              <div className="timeline-badge" style={{ backgroundImage: 'url(images/couple-3.jpg)' }}></div>
+              <div className="timeline-badge" style={{ backgroundImage: 'url(images/wedding-invite.jpg)' }}></div>
               <ScrollAnimation animateIn="animate__fadeInUp" animateOnce className="timeline-panel">
                 <div className="timeline-heading">
                   <h3 className="timeline-title">De Trouw</h3>

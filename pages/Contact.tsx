@@ -9,7 +9,7 @@ export const Contact = () => {
         id="fh5co-header"
         className="fh5co-cover fh5co-cover-sm"
         role="banner"
-        style={{ backgroundImage: 'url(images/img_bg_1.jpg)' }}
+        style={{ backgroundImage: 'url(images/img_bg_2.jpg)' }}
       >
         <div className="overlay"></div>
         <div className="fh5co-container">
