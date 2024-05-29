@@ -30,7 +30,7 @@ export const Gallery = ({ data, env }: { data: Photo[]; env: ENV }) => {
                   <button className="btn" onClick={() => setScreenSaverIsActive(true)}>
                     Start Screensaver
                   </button>
-                  <UploadButton env={env} />
+                  {/* <UploadButton env={env} /> */}
                 </div>
               </div>
             </div>
@@ -39,11 +39,11 @@ export const Gallery = ({ data, env }: { data: Photo[]; env: ENV }) => {
       </header>
       {slideshowIsActive && <SlideShow data={data} setSlideshowIsActive={setSlideshowIsActive} />}
       {screenSaverIsActive && <ScreenSaver photos={data} setScreenSaverIsActive={setScreenSaverIsActive} />}
-      <ul className="image-gallery">
+      {data && <ul className="image-gallery">
         {data.map((photo, i, collection) => (
           <PhotoItem photo={photo} collection={collection} key={i} index={i} />
         ))}
-      </ul>
+      </ul>}
     </>
   );
 };

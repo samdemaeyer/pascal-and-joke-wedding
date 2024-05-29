@@ -7,7 +7,7 @@ import { Image } from './Image/Image';
 import './ScreenSaver.css';
 
 export const ScreenSaver = ({
-  photos,
+  photos = [],
   setScreenSaverIsActive,
 }: {
   photos: Photo[];
